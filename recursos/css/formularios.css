@@ -1,0 +1,147 @@
+:root {
+    --color-principal: #ffc107;
+    --color-secundario: #fff8e5f3;
+    --color-error: rgb(241, 22, 22);
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr 100px;
+    height: 100vh;
+    min-width: 351px;
+    position: relative;
+}
+
+header {
+    
+    display: flex;
+    justify-content: center;
+    border-bottom: #bebebe solid 1px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 5px;
+    img {
+        margin: 20px;
+        width: 320px;
+    }
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+#formulario, #formulario1, #formulario2 {
+    background-color:var(--color-secundario);
+    border: var(--color-principal) solid 2px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    font-size: 1.2rem;
+
+    h1 {
+        margin-bottom: 30px;
+    }
+
+    .campo {
+        position: relative;
+        margin-bottom: 20px;
+        max-width: 253px;
+
+        input {
+            margin-bottom: 0;
+        }
+
+        .error {
+            font-size: 1rem;
+            color: var(--color-error);
+        }
+
+        svg {
+            display: none;
+            width: 18px;
+            height: 18px;
+            position: absolute;
+            top: 5px;
+            right: 3px;
+            fill: var(--color-error);
+            
+        }
+    }
+
+    .campo.tipo:nth-child(5){
+       display: none;
+    }
+}
+
+
+
+input {
+    margin-bottom: 20px;
+    margin-top: 5px;
+    font-size: 1.2rem;
+    padding: 8px;
+}
+
+select {
+    font-size: 1.2rem;
+    padding: 8px;
+}
+
+#boton {
+    border-radius: 5px;
+    background-color: var(--color-principal);
+    font-size: 1.1rem;
+    border: solid 1px #000;
+    cursor: pointer;
+        margin-bottom: 0;
+        margin-bottom: 20px;
+        margin-top: 5px;
+        font-size: 1.2rem;
+        padding: 8px;
+    }
+
+
+#boton:hover {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+#container-boton {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 20px;
+
+    span{
+        font-size: 1rem;
+    }
+   
+}
+
+#container-boton-iniciar{
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    gap: 20px;
+
+    #boton {
+        margin-bottom: 0;
+    }
+    #cuenta-incorrecta {
+        margin-bottom: 30px;
+        font-size: 1rem;
+        color: var(--color-error);
+    }
+}

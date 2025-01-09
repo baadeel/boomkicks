@@ -1,0 +1,42 @@
+body {
+    display: grid;
+    grid-template-rows: auto 1fr 50px;
+    height: 100vh;
+    position: relative;
+} 
+
+div, span {
+    outline: none;
+}
+
+footer {
+    display: flex;
+    background-color: var(--color-secundario);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.15);
+
+
+    div {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        a:first-child img{
+            width: 30px;
+            height: 30px;
+        }
+
+        a:nth-child(2) img{
+            width: 35px;
+            height: 35px;
+        }
+
+        a:last-child img{
+            width: 28px;
+            height: 28px;
+        }
+    }
+}

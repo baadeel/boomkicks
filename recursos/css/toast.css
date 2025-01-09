@@ -1,0 +1,42 @@
+
+:root {
+    --color-principal: #ffc107;
+    --color-secundario: #fff8e5f3;
+    --color-verde: #4aa155;
+    --color-rojo: #c74244;
+    --color-azul: #3eaac5;
+    --color-naraja: #3eaac5;
+
+}
+
+
+.toast {
+    
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    color: white;
+    max-width: 500px;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 20px;
+    border-radius: 4px;
+    transform: translate(-50%);
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    z-index: 1;
+    white-space: nowrap;
+    
+
+
+    img {
+        width: 40px;
+    }
+}
+
+.esconder {
+  display: none;
+}

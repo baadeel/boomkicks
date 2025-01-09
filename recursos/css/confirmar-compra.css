@@ -1,0 +1,110 @@
+:root {
+    --color-principal: #ffc107;
+    --color-secundario: #fff8e5f3;
+}
+
+#confirmar-compra {
+    margin: 0 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+}
+
+#direcciones {
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    .direccion {
+        padding: 10px;
+        border-radius: 5px;
+        border: 2px solid #000;
+        width: 221px;
+        height: 193px;
+        
+        h3, p{
+            max-height: 20px;
+                    overflow: hidden;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 2;
+                    text-overflow: ellipsis;
+                    word-break: break-all;
+        }
+
+
+        .seleccionar {
+            padding: 4px 8px;
+            margin-top: 10px;
+            border-radius: 5px;
+            background-color: white;
+        }
+
+        .seleccionar:hover {
+            cursor: pointer;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+        }
+
+    }
+
+    .seleccionado {
+        background-color: var(--color-principal);
+    }
+}
+
+#confirmar {
+    margin: 20px 0 10px 0;
+    width: fit-content;
+    padding: 10px 16px;
+    border-radius: 20px;
+    border: 1px solid #000;
+    font-weight: 700;
+    font-size: .9rem;
+    background-color: var(--color-principal);
+
+}
+
+#confirmar:hover {
+    cursor: not-allowed;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+#nueva-direccion {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    width: 221px;
+    height: 193px;
+    
+    #h3-nueva {
+        display: block;
+        overflow: auto;
+        width: auto;
+        max-height:fit-content;
+        word-break: normal;
+    }
+}
+
+#compra-realizada{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 20px;
+}
+
+
+@media (min-width: 760px) {
+    #confirmar-compra{
+        justify-content: start;
+        align-items: start;
+    }
+
+    #direcciones {
+        justify-content: start;
+        align-items: start;
+    }
+}

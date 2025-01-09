@@ -1,0 +1,240 @@
+:root {
+    --color-principal: #ffc107;
+    --color-secundario: #fff8e5f3;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#producto {
+    border-radius: 5px;
+    margin: 20px;
+    width: 95%;
+    min-width: 320px;
+    max-width: 500px;
+
+    .articulo-top {
+        position: relative;
+
+        #titulo-articulo {
+            margin: 0px 0 5px 15px;
+
+            h1{
+                margin-top: 10px;
+                font-size: 2rem;
+            }
+        }
+
+        .zapatilla {
+            width: 100%;
+            max-width: 500px;
+        }
+
+        #precio {
+            font-size: 1.5rem;
+            text-align: end;
+            margin-right: 25px;
+            margin-bottom: 10px;
+        }
+
+        .corazon {
+            width: 35px;
+            position: absolute;
+            top: 10%;
+            right: 10%;
+            cursor: pointer;
+        }
+    }
+
+    .articulo-bottom {
+        
+
+        #descripcion {
+            margin: 0 10px 40px 15px;
+
+            h3 {
+                font-size: 1.2rem;
+                margin-bottom: 10px;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+        }
+
+        #tallas-container {
+            margin: 0 10px 20px 15px;
+
+            h3 {
+                margin-bottom: 5px;
+                font-size: 1.2rem;
+            }
+
+            #info {
+                margin-top: 10px;
+            }
+
+            #tallas {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+
+                .talla {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    width: 60px;
+                    height: 40px;
+                    border: #bebebe solid 1px;
+                    border-radius: 5px;
+                    background-color: white;
+                }
+
+                .talla:hover {
+                    cursor: pointer;
+                    background-color: var(--color-principal);
+                    border-color: #000;
+                    border-width: 3px;
+                }
+
+                .seleccionado {
+                    background-color: var(--color-principal);
+                    border: 3px solid #000;
+                }
+            }
+        }
+
+        #contador {
+            display: flex;
+            margin-left: 15px;
+            width: 120px;
+            height: 40px;
+            border: #bebebe 2px solid;
+            border-radius: 50px;
+            justify-content: space-between;
+            align-items: center;
+            overflow: hidden;
+           
+
+            button {
+                height: 100%;
+                width: 35px;
+                border-width: 0;
+                background-color: var(--color-principal);
+                cursor: not-allowed;
+            }
+            
+            #cantidad {
+                color: #bebebe;
+            }
+
+            #restar{
+                font-size: 1.8rem;
+            }
+
+            #sumar {
+                font-size: 1.2rem;
+            }
+        }
+
+        #confirmar {
+            margin: 20px 0 20px 15px;
+            padding: 12px 40px;
+            border-radius: 50px;
+            background-color: var(--color-principal);
+            font-size: 1rem;
+            font-weight: 700;
+        }
+
+    }
+}
+
+@media (min-width: 900px) {
+
+    #producto {
+        position: relative;
+        padding: 20px;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: 1fr;
+        width: 100%;
+        max-height: 520px;
+
+        max-width: 1200px;
+
+        .articulo-top {
+            grid-row: 1/3;
+            min-width: 500px;
+
+            .zapatilla {
+                min-width: 500px;
+            }
+
+            #precio{
+                margin: 0;
+            }
+        }
+
+        .articulo-bottom {
+            max-height: 477px;
+            display: grid;
+            grid-template-rows: 1fr 1fr 80px 50px;
+            margin-left: 50px;
+           
+
+            #descripcion{
+                margin: 0;
+                max-width: 500px;
+                overflow: auto;
+                padding-bottom: 20px;
+
+                h3 {
+                    
+                    font-size: 1.5rem;
+                    margin: 10px 0;
+                }
+
+                p {
+                    font-size: 1.2rem;
+                }
+
+            }
+
+            #tallas-container{
+                margin: 0;
+                align-self: center;
+            }
+
+            #contador {
+                
+                align-self: center;
+                margin: 0;
+                button {
+                    height: 100%;
+                    width: 35px;
+                    border-width: 0;
+                    background-color: var(--color-principal);
+                }
+    
+                #restar{
+                    font-size: 1.8rem;
+                }
+    
+                #sumar {
+                    font-size: 1.2rem;
+                }
+            }
+
+            #confirmar {
+                margin: 0;
+                width: fit-content;
+                height: fit-content;
+                align-self: end;
+            }
+        }
+    }
+}
