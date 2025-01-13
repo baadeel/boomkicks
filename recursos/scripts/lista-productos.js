@@ -24,6 +24,7 @@ selects.forEach(e => {
             peticion.onload = function () {
                 if (peticion.status == 200) {
                     slider.innerHTML = peticion.response;
+                    logicaLikes();
                 }
             }
 
@@ -42,6 +43,7 @@ selects.forEach(e => {
             peticion.onload = function () {
                 if (peticion.status == 200) {
                     slider.innerHTML = peticion.response;
+                    logicaLikes();
                 }
             }
 
@@ -60,10 +62,12 @@ selects.forEach(e => {
             peticion.onload = function () {
                 if (peticion.status == 200) {
                     slider.innerHTML = peticion.response;
+                    logicaLikes();
                 }
             }
         } else {
             slider.innerHTML = contenidoOriginalSlider;
+            logicaLikes();
         }
     });
 

@@ -22,10 +22,12 @@ buscador.addEventListener('input', (event) => {
         peticion.onload = function () {
             if (peticion.status == 200) {
                 main.innerHTML = peticion.response;
+                logicaLikes();
             }
         }
     } else if (query.length == 0) {
         main.innerHTML = contenidoOriginal;
+        logicaLikes();
         if(window.location.href.includes("carrito")){
             location.reload();
         }
